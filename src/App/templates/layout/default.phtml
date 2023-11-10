@@ -1,0 +1,35 @@
+<?php
+$this->headLink()
+    ->prependStylesheet('/css/styles.css');
+$this->inlineScript();
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <?=$this->headTitle("Hawai'i Five O")->setSeparator(' - ')->setAutoEscape(false)?>
+    <?=$this->headMeta()?>
+    <?=$this->headLink()?>
+</head>
+<body class="bg-blue-50 p-6">
+    <main class="grid grid-cols-1 content-center items-center w-full w-auto max-w-8xl">
+        <div class="mb-6 grid grid-cols-2">
+            <img src="/images/hawaii-five-0-logo-small.png" alt="Hawaii Five-0 Logo">
+        </div>
+        <?=$this->content?>
+    </main>
+
+    <footer class="w-auto max-w-7xl">
+        <hr class="mb-4" >
+        <div class="text-sm">
+            <p>
+                &copy; <?=date('Y')?> <a href="https://matthewsetter.com">Matthew Setter</a>.
+            </p>
+        </div>
+    </footer>
+
+    <?=$this->inlineScript()?>
+</body>
+</html>
